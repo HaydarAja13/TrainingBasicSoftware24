@@ -33,56 +33,48 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body class="max-w-screen-2xl mx-auto">
-    <header class="bg-white fixed w-full z-10">
-      <div class="mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <div class="flex-1 md:flex md:items-center md:gap-12">
-            <a class="block text-black font-bold md:text-lg" href="#"
-              >dept. Software</a
-            >
-          </div>
-          <div class="md:flex md:items-center md:gap-12">
-            <nav aria-label="Global" class="hidden md:block">
-              <ul class="flex items-center gap-14 text-sm">
-                <li>
-                  <a
-                    class="text-gray-500 font-medium md:text-base transition hover:text-tb-green"
-                    href="#about"
-                  >
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="text-gray-500 font-medium md:text-base transition hover:text-tb-green"
-                    href="#skills"
-                  >
-                    Skills
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="text-gray-500 font-medium md:text-base transition hover:text-tb-green"
-                    href="#experience"
-                  >
-                    Experience
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="text-gray-500 font-medium md:text-base transition hover:text-tb-green"
-                    href="#projects"
-                  >
-                    Projects
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+    <header class="bg-white fixed w-full text-slate-800 z-10 py-4">
+      <nav class="flex justify-between items-center w-[96%] mx-auto">
+        <div>
+          <p class="text-center text-xl font-bold">dept. Software</p>
         </div>
-      </div>
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[45vh] left-0 top-[-800px] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+          >
+            <li>
+              <a class="hover:text-tb-green duration-300" href="#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-tb-green duration-300" href="#skills"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-tb-green duration-300" href="#experience"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-tb-green duration-300" href="#projects"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          name="menu"
+          class="text-3xl cursor-pointer md:hidden"
+        ></ion-icon>
+      </nav>
     </header>
     <main class="grid gap-y-32">
       <section id="about">
@@ -415,6 +407,12 @@
         </ul>
       </div>
     </footer>
-    <script></script>
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-0");
+      }
+    </script>
   </body>
 </html>
