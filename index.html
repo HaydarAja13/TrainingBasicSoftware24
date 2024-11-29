@@ -1,51 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-      *::-webkit-scrollbar {
-        display: none;
-      }
-
-      * {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        scroll-behavior: smooth;
-        scroll-margin-top: 120px;
-      }
-    </style>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              "tb-green": "#15B392",
+              "tb-green": "#15b392",
             },
           },
         },
       };
     </script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body class="max-w-screen-2xl mx-auto">
-    <header class="bg-white fixed w-full text-slate-800 z-10 py-4">
-      <nav class="flex justify-between items-center w-[96%] mx-auto">
+  <body class="mx-auto max-w-screen-2xl">
+    <header class="fixed z-10 w-full bg-white py-4 text-slate-800">
+      <nav class="mx-auto flex w-[94%] items-center justify-between">
         <div>
           <p class="text-center text-xl font-bold">dept. Software</p>
         </div>
         <div
-          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[45vh] left-0 top-[-800px] md:w-auto w-full flex items-center px-5"
+          class="nav-links absolute left-0 top-[-800px] flex min-h-[45vh] w-full items-center bg-white px-5 duration-500 md:static md:min-h-fit md:w-auto"
         >
           <ul
-            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+            class="flex flex-col gap-8 md:flex-row md:items-center md:gap-[4vw]"
           >
             <li>
               <a class="hover:text-tb-green duration-300" href="#about"
@@ -69,23 +51,33 @@
             </li>
           </ul>
         </div>
-        <ion-icon
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
           onclick="onToggleMenu(this)"
-          name="menu"
-          class="text-3xl cursor-pointer md:hidden"
-        ></ion-icon>
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="z-10 size-8 cursor-pointer md:hidden"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+          />
+        </svg>
       </nav>
     </header>
     <main class="grid gap-y-32">
       <section id="about">
         <div
-          class="relative mx-auto px-4 pt-28 sm:px-6 lg:flex lg:items-center lg:px-8"
+          class="relative mx-auto grid grid-cols-1 px-8 pt-28 sm:px-10 md:grid-cols-2 lg:items-center lg:px-12"
         >
-          <div class="max-w-xl">
+          <div class="">
             <h1 class="text-3xl font-medium sm:text-5xl">
               I'm
-              <strong class="block font-extrabold text-tb-green"
-                >Waaarseno.
+              <strong class="text-tb-green block font-extrabold"
+                >Johnnn.
               </strong>
             </h1>
             <p class="mt-4 max-w-lg text-lg">
@@ -97,20 +89,25 @@
             <div class="mt-8 flex flex-wrap gap-4">
               <a
                 href="#"
-                class="block w-full rounded-lg bg-gray-800 px-12 py-3 text-sm font-medium text-white shadow hover:text-tb-green sm:w-auto"
+                class="hover:text-tb-green block w-full rounded-lg bg-gray-800 px-12 py-3 text-center text-sm font-medium text-white shadow sm:w-auto"
               >
                 Learn More
               </a>
             </div>
           </div>
+          <img
+            src="images/john.png"
+            alt=""
+            class="mx-auto hidden h-[28rem] rounded-lg shadow-lg md:block"
+          />
         </div>
       </section>
-      <section id="skills" class="bg-gray-100 p-6 grid items-center">
+      <section id="skills" class="grid items-center bg-gray-800 p-6">
         <div
-          class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 sm:px-6 lg:px-8 px-4"
+          class="grid grid-cols-1 gap-4 px-4 sm:px-6 lg:grid-cols-4 lg:gap-8 lg:px-8"
         >
           <div class="h-32 rounded-lg bg-gray-50">
-            <div class="flex gap-2 justify-center items-center size-full">
+            <div class="flex size-full items-center justify-center gap-6">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"
                 class="w-[50px] object-cover"
@@ -122,7 +119,7 @@
             </div>
           </div>
           <div class="h-32 rounded-lg bg-gray-50">
-            <div class="flex gap-2 justify-center items-center size-full">
+            <div class="flex size-full items-center justify-center gap-6">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg"
                 class="w-[50px] object-cover"
@@ -134,7 +131,7 @@
             </div>
           </div>
           <div class="h-32 rounded-lg bg-gray-50">
-            <div class="flex gap-2 justify-center items-center size-full">
+            <div class="flex size-full items-center justify-center gap-6">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
                 class="w-[50px] object-cover"
@@ -146,7 +143,7 @@
             </div>
           </div>
           <div class="h-32 rounded-lg bg-gray-50">
-            <div class="flex gap-2 justify-center items-center size-full">
+            <div class="flex size-full items-center justify-center gap-6">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
                 class="w-[50px] object-cover"
@@ -161,13 +158,13 @@
       </section>
       <section id="experience">
         <div
-          class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 sm:px-6 lg:px-8 mb-10 px-4"
+          class="mb-10 grid grid-cols-1 gap-4 px-4 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:px-8"
         >
           <div
-            class="h-auto rounded-lg bg-gray-100 p-8 flex flex-col justify-center"
+            class="bg-pattern flex h-auto flex-col justify-center rounded-lg p-8"
           >
-            <h1 class="text-4xl font-bold mb-4 text-tb-green">Experience</h1>
-            <p class="text-base max-w-sm">
+            <h1 class="text-tb-green mb-4 text-4xl font-bold">Experience</h1>
+            <p class="max-w-sm text-base text-white">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Perspiciatis pariatur rerum deleniti dolor cum placeat accusantium
               odio veritatis aut quasi. At nihil quos praesentium, explicabo
@@ -175,17 +172,13 @@
             </p>
           </div>
           <div
-            class="h-auto rounded-lg bg-gray-100 p-8 flex flex-col gap-8 justify-center"
+            class="flex h-auto flex-col justify-center gap-8 rounded-lg bg-gray-100 p-8"
           >
-            <div class="flex flex-col md:flex-row items-center md:gap-8 mb-3">
-              <img
-                src="https://placehold.co/300x150"
-                alt=""
-                class="rounded-lg"
-              />
+            <div class="mb-3 flex flex-col items-center md:flex-row md:gap-8">
+              <img src="images/exp1.webp" alt="" class="h-36 rounded-lg" />
               <div>
-                <h3 class="text-lg text-center md:text-left mt-2 font-medium">
-                  PT. Indonesia Maju
+                <h3 class="mt-2 text-center text-lg font-bold md:text-left">
+                  PT. Freeport
                 </h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
@@ -194,14 +187,10 @@
                 </p>
               </div>
             </div>
-            <div class="flex flex-col md:flex-row items-center md:gap-8 mb-3">
-              <img
-                src="https://placehold.co/300x150"
-                alt=""
-                class="rounded-lg"
-              />
+            <div class="mb-3 flex flex-col items-center md:flex-row md:gap-8">
+              <img src="images/exp2.webp" alt="" class="h-36 rounded-lg" />
               <div>
-                <h3 class="text-lg text-center md:text-left mt-2 font-medium">
+                <h3 class="mt-2 text-center text-lg font-bold md:text-left">
                   Freelance
                 </h3>
                 <p>
@@ -211,14 +200,10 @@
                 </p>
               </div>
             </div>
-            <div class="flex flex-col md:flex-row items-center md:gap-8 mb-3">
-              <img
-                src="https://placehold.co/300x150"
-                alt=""
-                class="rounded-lg"
-              />
+            <div class="mb-3 flex flex-col items-center md:flex-row md:gap-8">
+              <img src="images/exp3.webp" alt="" class="h-36 rounded-lg" />
               <div>
-                <h3 class="text-lg text-center md:text-left mt-2 font-medium">
+                <h3 class="mt-2 text-center text-lg font-bold md:text-left">
                   College Student
                 </h3>
                 <p>
@@ -232,22 +217,22 @@
         </div>
       </section>
       <section id="projects">
-        <div class="sm:px-6 lg:px-8 mb-10 px-4">
-          <h1 class="text-4xl font-bold mb-4 text-tb-green">My Projects</h1>
-          <p class="text-base max-w-2xl">
+        <div class="mb-10 px-8 sm:px-10 lg:px-12">
+          <h1 class="text-tb-green mb-4 text-4xl font-bold">My Projects</h1>
+          <p class="max-w-2xl text-base">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Dignissimos, distinctio! Animi distinctio consectetur eius
             architecto sint alias, reiciendis nobis modi, molestias atque
             aperiam rem quibusdam? Cumque totam adipisci beatae libero.
           </p>
           <div
-            class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mt-10 px-4"
+            class="mt-10 grid grid-cols-1 gap-4 px-4 lg:grid-cols-2 lg:gap-8"
           >
             <a href="#" class="block">
               <img
                 alt=""
-                src="https://placehold.co/600x400"
-                class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-64 lg:h-72"
+                src="images/prj1.png"
+                class="h-56 w-full rounded-bl-3xl rounded-tr-3xl  object-covershadow-xl sm:h-64 lg:h-72"
               />
               <div
                 class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4"
@@ -262,8 +247,8 @@
             <a href="#" class="block">
               <img
                 alt=""
-                src="https://placehold.co/600x400"
-                class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-64 lg:h-72"
+                src="images/prj2.png"
+                class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover shadow-xl sm:h-64 lg:h-72"
               />
               <div
                 class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4"
@@ -278,8 +263,8 @@
             <a href="#" class="block">
               <img
                 alt=""
-                src="https://placehold.co/600x400"
-                class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-64 lg:h-72"
+                src="images/prj3.png"
+                class="h-56 w-full rounded-bl-3xl rounded-tr-3xl  object-covershadow-xl sm:h-64 lg:h-72"
               />
               <div
                 class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4"
@@ -294,29 +279,27 @@
             <a href="#" class="block">
               <img
                 alt=""
-                src="https://placehold.co/600x400"
-                class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-64 lg:h-72"
+                src="images/prj4.png"
+                class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover shadow-xl sm:h-64 lg:h-72"
               />
               <div
                 class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4"
               >
-                <strong class="font-medium">Si Madu</strong>
+                <strong class="font-medium">Portofolio</strong>
                 <span
                   class="hidden sm:block sm:h-px sm:w-8 sm:bg-blue-500"
                 ></span>
-                <p class="mt-0.5 opacity-50 sm:mt-0">UI/UX Design</p>
+                <p class="mt-0.5 opacity-50 sm:mt-0">Web Design</p>
               </div>
             </a>
           </div>
         </div>
       </section>
     </main>
-    <footer class="bg-gray-100">
-      <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <footer class="bg-footer">
+      <div class="mx-auto max-w-5xl px-4 py-16 text-white sm:px-6 lg:px-8">
         <p class="text-center text-xl font-bold">dept. Software</p>
-        <p
-          class="mx-auto mt-2 max-w-md text-center leading-relaxed text-gray-500"
-        >
+        <p class="mx-auto mt-2 max-w-md text-center leading-relaxed">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
           consequuntur amet culpa cum itaque neque.
         </p>
@@ -326,7 +309,7 @@
               href="#"
               rel="noreferrer"
               target="_blank"
-              class="text-gray-700 transition hover:text-gray-700/75"
+              class="text-white transition hover:text-teal-300/75"
             >
               <span class="sr-only">Facebook</span>
               <svg
@@ -348,7 +331,7 @@
               href="#"
               rel="noreferrer"
               target="_blank"
-              class="text-gray-700 transition hover:text-gray-700/75"
+              class="text-white transition hover:text-teal-300/75"
             >
               <svg
                 class="size-6"
@@ -369,7 +352,7 @@
               href="#"
               rel="noreferrer"
               target="_blank"
-              class="text-gray-700 transition hover:text-gray-700/75"
+              class="text-white transition hover:text-teal-300/75"
             >
               <svg
                 class="size-6"
@@ -388,7 +371,7 @@
               href="#"
               rel="noreferrer"
               target="_blank"
-              class="text-gray-700 transition hover:text-gray-700/75"
+              class="text-white transition hover:text-teal-300/75"
             >
               <svg
                 class="size-6"
@@ -407,12 +390,6 @@
         </ul>
       </div>
     </footer>
-    <script>
-      const navLinks = document.querySelector(".nav-links");
-      function onToggleMenu(e) {
-        e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("top-0");
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
